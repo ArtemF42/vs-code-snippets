@@ -1,0 +1,76 @@
+{
+	"numpy": {
+		"prefix": ["numpy", "np"],
+		"body": "import numpy as np"
+	},
+	"pandas": {
+		"prefix": ["pandas", "pd"],
+		"body": "import pandas as pd"
+	},
+	"polars": {
+		"prefix": ["polars", "pl"],
+		"body": "import polars as pl"
+	},
+	"matplotlib": {
+		"prefix": ["matplotlib", "plt"],
+		"body": "import matplotlib.pyplot as plt"
+	},
+	"seaborn": {
+		"prefix": ["seaborn", "sns"],
+		"body": "import seaborn as sns"
+	},
+	"plotly": {
+		"prefix": ["plotly", "px"],
+		"body": "import plotly.express as px"
+	},
+	"torch": {
+		"prefix": "torch",
+		"body": [
+			"import torch",
+			"import torch.nn as nn",
+			"from torch.utils.data import Dataset, DataLoader"
+		]
+	},
+	"class": {
+		"prefix": "class",
+		"body": [
+			"class $1:",
+			"    def __init__(self) -> None:",
+			"        $2"
+		]
+	},
+	"script": {
+		"prefix": ["argparse", "script"],
+		"body": [
+			"from argparse import ArgumentParser, Namespace",
+			"",
+			"",
+			"def parse_args() -> Namespace:",
+			"    parser = ArgumentParser()",
+			"",
+			"    parser.add_argument($1)",
+			"",
+			"    return parser.parse_args()",
+			"",
+			"",
+			"def main() -> None:",
+			"    args = parse_args()"
+		]
+	},
+	// PyTorch snippets
+	"dataset": {
+		"prefix": "dataset",
+		"body": [
+			"class $1(Dataset):",
+			"    def __init__(self) -> None:",
+			"        super().__init__()",
+			"        $2",
+			"",
+			"def __getitem__(self, index: int) -> $3:",
+			"    $4",
+			"",
+			"def __len__(self) -> int:",
+			"    $5"
+		]
+	}
+}
